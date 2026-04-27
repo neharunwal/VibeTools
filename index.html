@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Tools Atlas</title>
+    <meta
+      name="description"
+      content="A lightweight directory of vibe coding tools with history, workflows, official links, and YouTube guides."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="aurora">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#home">
+          <span class="brand-mark">VA</span>
+          <span>
+            <strong>Vibe Tools Atlas</strong>
+            <small>Build faster with the right coding agent</small>
+          </span>
+        </a>
+
+        <nav class="menu" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#explorer">Explorer</a>
+          <a href="#playbooks">Playbooks</a>
+          <a href="#videos">Videos</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="ghost-button" id="themeToggle" type="button" aria-label="Cycle theme">
+            Palette
+          </button>
+          <button class="primary-button" id="openSettings" type="button">
+            Settings
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow">Curated on April 27, 2026</p>
+            <h1>One clean place to compare the tools shaping vibe coding.</h1>
+            <p class="hero-text">
+              Explore the history of the biggest AI-native coding tools, see what each one is best
+              at, jump to official docs, and keep your own color palette saved in cookies on this
+              browser.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-button" href="#explorer">Browse tools</a>
+              <a class="ghost-button" href="#playbooks">Pick a workflow</a>
+            </div>
+
+            <div class="hero-stats" id="heroStats" aria-label="Site highlights"></div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Featured signals">
+            <div class="hero-panel-card">
+              <p class="panel-label">Popular categories</p>
+              <div class="signal-stack">
+                <span>AI IDEs</span>
+                <span>Prompt-to-app builders</span>
+                <span>Terminal agents</span>
+                <span>Open-source copilots</span>
+              </div>
+            </div>
+            <div class="hero-panel-card">
+              <p class="panel-label">Fastest paths</p>
+              <ul class="mini-list">
+                <li>Non-coder MVP: Lovable or Replit Agent</li>
+                <li>Frontend sprint: v0 or Bolt</li>
+                <li>Big repo work: Cursor, Windsurf, Claude Code</li>
+                <li>Open workflow: Cline</li>
+              </ul>
+            </div>
+            <div class="hero-panel-card waveform-card" aria-hidden="true">
+              <div class="wave">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p>Tools are getting more autonomous. Good judgment still matters.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="timeline-section" id="timeline">
+          <div class="section-heading">
+            <p class="eyebrow">History</p>
+            <h2>How vibe coding grew from autocomplete to full app builders</h2>
+          </div>
+          <div class="timeline" id="timelineList"></div>
+        </section>
+
+        <section class="explorer-section" id="explorer">
+          <div class="section-heading">
+            <p class="eyebrow">Explorer</p>
+            <h2>Search by tool name, category, or ideal use case</h2>
+          </div>
+
+          <div class="controls">
+            <label class="search-field">
+              <span class="sr-only">Search tools</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Search Cursor, app builders, open-source, frontend..."
+              />
+            </label>
+            <div class="filter-row" id="filterRow" aria-label="Category filters"></div>
+          </div>
+
+          <div class="tool-grid" id="toolGrid"></div>
+        </section>
+
+        <section class="playbook-section" id="playbooks">
+          <div class="section-heading">
+            <p class="eyebrow">Playbooks</p>
+            <h2>Where to start, depending on how you like to build</h2>
+          </div>
+          <div class="playbook-grid">
+            <article class="playbook-card">
+              <h3>For non-coders</h3>
+              <p>Start with Lovable, Replit Agent, or Bolt if you want to describe a product and iterate visually.</p>
+            </article>
+            <article class="playbook-card">
+              <h3>For frontend-heavy work</h3>
+              <p>Choose v0 for React-first UI generation, then pull the result into Cursor or Windsurf for polishing.</p>
+            </article>
+            <article class="playbook-card">
+              <h3>For terminal-first builders</h3>
+              <p>Claude Code and Cline shine when you want codebase-wide changes, testing loops, and command-line control.</p>
+            </article>
+            <article class="playbook-card">
+              <h3>For team workflows</h3>
+              <p>GitHub Copilot, Cursor, and Devin fit best when review, handoff, and production workflows matter as much as speed.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="video-section" id="videos">
+          <div class="section-heading">
+            <p class="eyebrow">Watch</p>
+            <h2>Jump into demos, intros, and walkthroughs</h2>
+          </div>
+          <div class="video-grid" id="videoGrid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Built as a lightweight static site. Theme choices are stored in cookies on this browser.
+          Official websites and docs were checked on April 27, 2026.
+        </p>
+      </footer>
+    </div>
+
+    <aside class="settings-drawer" id="settingsDrawer" aria-hidden="true">
+      <div class="settings-card">
+        <div class="settings-header">
+          <div>
+            <p class="eyebrow">Settings</p>
+            <h2>Color combinations</h2>
+          </div>
+          <button class="icon-button" id="closeSettings" type="button" aria-label="Close settings">
+            ×
+          </button>
+        </div>
+
+        <p class="settings-note">
+          No account needed. Your palette and layout preferences stay on this browser using cookies.
+        </p>
+
+        <div class="theme-grid" id="themeGrid"></div>
+
+        <label class="toggle-row">
+          <span>
+            <strong>Compact cards</strong>
+            <small>Tighten spacing for faster scanning</small>
+          </span>
+          <input id="compactToggle" type="checkbox" />
+        </label>
+      </div>
+    </aside>
+
+    <div class="drawer-scrim" id="drawerScrim" hidden></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
